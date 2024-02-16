@@ -1,0 +1,22 @@
+class Solution:
+    def findAnagrams(self, s: str, p: str):
+        if len(p) > len(s):
+            return []
+        
+        scounter, pcounter = {}, {}
+                                                        
+        for i in range(len(p)):
+            pcounter[p[i]] =  pcounter.get(p[i], 0) + 1 
+            scounter[s[i]] =  scounter.get(s[i], 0) + 1
+        res = [0] if scounter == pcounter else []
+        l = 0
+        for r in range(len(p),len(s)):
+            scounter[s[r]] = scounter.get(s[r], 0) + 1
+            scounter[s[l]] -= 1
+
+            if scounter[s[l]] == 0:
+                scounter.pop(s[l])
+            l += 1
+            if scounter == pcounter:
+                res.append(l)
+        return res
