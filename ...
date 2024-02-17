@@ -1,0 +1,13 @@
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+	new file:   MergeIntervals.py
+	new file:   findAllAnagramsInAString,py
+	new file:   letterCombinationsOfAPhoneNumber.py
+	new file:   longestPalindrome.py
+	new file:   longestPalindromicSubstring.py
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	...
+
