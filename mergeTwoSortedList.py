@@ -5,7 +5,7 @@ class Solution:
         while list1 != None and list2 != None:
             if list1.val < list2.val:
                 dummy.next = list1
-                #why isn't it dummy.next = list1.val?
+                # it's dummy.next = list1 cos it's the node we're rearranging and not the value
                 list1 = list1.next
             
             else:
